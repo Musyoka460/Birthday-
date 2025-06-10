@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Celebrations 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=Comic+Neue:wght@400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Banner -->
+    <div class="welcome-banner">
+        <div class="floating-balloons">
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+            <div class="balloon"></div>
+        </div>
+        <div class="welcome-content">
+            <h1 class="welcome-title">Happy Birthday!</h1>
+            <p class="welcome-subtitle">Celebrating our special people in 2025</p>
+            
+            <div class="upcoming-birthday">
+                <h3>Next Birthday:</h3>
+                <div class="upcoming-date">
+                    <i class="fas fa-birthday-cake"></i>
+                    <span id="next-birthday-name">Loading...</span>
+                    <span id="next-birthday-date">Loading...</span>
+                </div>
+            </div>
+            
+            <div class="party-countdown">
+                <div class="countdown-item">
+                    <div class="countdown-value" id="countdown-days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="countdown-hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="countdown-minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-value" id="countdown-seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Birthday Stars Section -->
+        <div class="birthday-stars-section">
+            <h2 class="section-title">Our Birthday Stars</h2>
+            
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search birthdays...">
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-star"></i> All
+                </button>
+                <button class="filter-btn" data-filter="upcoming">
+                    <i class="fas fa-calendar-alt"></i> Upcoming
+                </button>
+                <button class="filter-btn" data-filter="past">
+                    <i class="fas fa-history"></i> Past
+                </button>
+                <button class="filter-btn" data-filter="today">
+                    <i class="fas fa-birthday-cake"></i> Today
+                </button>
+            </div>
+
+            <div class="birthday-grid" id="birthdayGrid">
+                <!-- Birthday cards will be inserted here by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery-section">
+            <h2 class="section-title">Memory Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="first birthday.jpg" alt="Birthday memory" class="gallery-image">
+                    <div class="gallery-caption">Best Birthday Ever!</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="best birthday.jpg" alt="With friends" class="gallery-image">
+                    <div class="gallery-caption">Friends Forever</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="trip.jpg" alt="Vacation" class="gallery-image">
+                    <div class="gallery-caption">Amazing Trip</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="love.jpg" alt="Graduation" class="gallery-image">
+                    <div class="gallery-caption">Big Achievement</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="family.jpg" alt="Family" class="gallery-image">
+                    <div class="gallery-caption">Family Time</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="adventure.jpg" alt="Adventure" class="gallery-image">
+                    <div class="gallery-caption">Great Adventure</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Birthday Story Timeline -->
+        <div class="timeline-section">
+            <h2 class="section-title">Brian's Birthday Story</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2010</div>
+                        <h3>The Beginning</h3>
+                        <img src="first birthday.jpg" alt="Baby photo" class="timeline-image">
+                        <p>The year it all began! Our first glimpse of that adorable smile that would light up our lives.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h3>First Big Celebration</h3>
+                        <img src="https://source.unsplash.com/random/300x200/?birthday,party,child" alt="Birthday party" class="timeline-image">
+                        <p>The first big birthday bash with friends, cake, and lots of presents!</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2020</div>
+                        <h3>Milestone Year</h3>
+                        <img src="https://source.unsplash.com/random/300x200/?teenager,boy" alt="Teenager" class="timeline-image">
+                        <p>Double digits! This was the year Brian really started to show his unique personality.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2025</div>
+                        <h3>Today</h3>
+                        <img src="first birthday.jpg" alt="Today" class="timeline-image">
+                        <p>Look how far he's come! We're so proud of the amazing person Brian has become.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="birthdayModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <img src="k" alt="Profile" class="modal-image" id="modalImage">
+            <h2 id="modalName"></h2>
+            <p id="modalDate"></p>
+            <div class="countdown" id="countdown"></div>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
